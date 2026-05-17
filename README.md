@@ -1,5 +1,7 @@
-# Databricks Bikestore
-Projeto de dados desenvolvido com arquitetura medalhão (Bronze, Silver e Gold), aplicando ingestão e transformação de dados em PySpark e SQL, juntamente com uma camada de observabilidade para monitoramento e análise das execuções das jobs.
+# 🚲Databricks Bikestore
+Projeto de Engenharia de Dados desenvolvido no Databricks utilizando arquitetura medalhão (Bronze, Silver e Gold) para ingestão, transformação e disponibilização de dados analíticos com PySpark e SQL.
+
+O projeto também conta com uma camada de observabilidade para monitoramento, rastreabilidade e análise das execuções das pipelines.
 
 ## 📖 Visão Geral
 
@@ -9,10 +11,10 @@ A solução contempla:
 - Ingestão de dados brutos
 - Transformação e padronização dos dados
 - Criação de tabelas analíticas
-- Monitoramento das pipelines
+- Monitoramento e rastreabilidade das pipelines
 - Visualização de indicadores em dashboard 
 
-## Arquitetura do projeto
+## 🏗️Arquitetura do projeto
 
 O projeto segue a arquitetura medalhão utilizando múltiplas camadas para organização e processamento dos dados.
 
@@ -26,14 +28,27 @@ Responsável pela ingestão inicial dos dados sem grandes transformações.
 Camada de tratamento, limpeza, padronização e aplicação das regras de negócio.
 
 ### Gold
-Camada analítica otimizada para consultas, métricas e consumo em dashboards.
+Camada analítica otimizada para consultas, métricas e consumo analítico.
 
 ### Observability
 Camada responsável pelo monitoramento das jobs, rastreamento das execuções e acompanhamento das métricas dos pipelines.
              
-Source Files --> Bronze --> Silver --> Gold --> Destination --> Dashboard
-             
-Observability (logs, metrics, monitoring, jobs)
+```text
+Source Files
+     ↓
+  Bronze
+     ↓
+  Silver
+     ↓
+   Gold
+     ↓
+Destination
+     ↓
+ Dashboard
+
+Observability:
+logs • metrics • monitoring • jobs
+```
 
 ## 📂 Estrutura do Projeto
 
@@ -69,3 +84,13 @@ bikestore/
     ├── ingestion_metrics/
     └── job_execution_metrics/
 ```
+
+
+## ⚙️ Tecnologias Utilizadas
+
+- Databricks
+- PySpark
+- Python
+- SQL 
+- Power BI
+- Git/GitHub
